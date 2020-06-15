@@ -3,11 +3,24 @@
 ```sh
 git pull upstream
 ```
+Update version to build in `/bin/version`
+(+ Modify files (if needed))
 
-Modify files (if needed) then build metabase
+Check java version installed
 
 ```sh
-./bin/build
+/usr/libexec/java_home -V
+```
+
+And set it to the right version
+
+```sh
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+```
+The build metabase
+
+```sh
+./bin/build no-translations
 ```
 
 # Metabase
