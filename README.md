@@ -1,3 +1,28 @@
+## MAJ metabase analytics
+
+```sh
+git pull upstream
+```
+Update version to build in `/bin/version`
+(+ Modify files (if needed))
+
+Check java version installed
+
+```sh
+/usr/libexec/java_home -V
+```
+
+And set it to the right version
+
+```sh
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+```
+The build metabase
+
+```sh
+./bin/build no-translations
+```
+
 # Metabase
 
 Metabase is the easy, open source way for everyone in your company to ask questions and learn from data.
