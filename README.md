@@ -1,3 +1,15 @@
+## MAJ metabase analytics
+
+```sh
+git pull upstream
+```
+
+Modify files (if needed) then build metabase
+
+```sh
+./bin/build
+```
+
 # Metabase
 Metabase is the easy, open source way for everyone in your company to ask questions and learn from data.
 
@@ -100,7 +112,7 @@ Then take a look at our [Contribution Guide](docs/contributing.md) for informati
 Talk to other contributors [in our Gitter room](https://gitter.im/metabase/metabase).
 
 # Internationalization
-We want Metabase to be avaliable in as many languages as possible. See what translations are avaliable and help contribute to internationalization using our project [over at POEditor](https://poeditor.com/join/project/ynjQmwSsGh)
+We want Metabase to be available in as many languages as possible. See what translations are available and help contribute to internationalization using our project [over at POEditor](https://poeditor.com/join/project/ynjQmwSsGh)
 
 # Extending and Deep Integrations
 

@@ -8,4 +8,4 @@ workflows:
     jobs:
       - gally-bot/docker-build-and-push:
           context: org-global
-          dockerTag: 0.33.6-$CIRCLE_BUILD_NUM
+          dockerTag: 0.35.4-$CIRCLE_BUILD_NUM
