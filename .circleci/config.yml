@@ -1,5 +1,10 @@
 version: 2.1
 
+orbs:
+  gally-bot: lifen/gally-bot@dev:first
+
+defaults: &defaults
+
 ########################################################################################################################
 #                                                      EXECUTORS                                                       #
 ########################################################################################################################
@@ -977,3 +982,10 @@ workflows:
           filters:
             branches:
               only: master
+
+      - gally-bot/docker-build-and-push:
+          context: org-global
+          applicationName: metabase
+          requires:
+            - build-uberjar
+            - fe-deps
