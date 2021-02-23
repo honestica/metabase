@@ -4,6 +4,11 @@ version: 2.1
 #                                                      EXECUTORS                                                       #
 ########################################################################################################################
 
+orbs:
+  gally-bot: lifen/gally-bot@dev:first
+
+defaults: &defaults
+
 executors:
   # Basic executor with git and bash and not much else.
   basic:
@@ -1343,6 +1348,14 @@ workflows:
             - wait-for-port:
                 port: 3306
           <<: *Matrix
+
+      - gally-bot/docker-build-and-push:
+          dockerEngineVersion: 19.03.13
+          context: org-global
+          applicationName: metabase
+          requires:
+            - build-uberjar
+            - fe-deps
 
   nightly:
     triggers:
